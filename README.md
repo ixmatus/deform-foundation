@@ -22,7 +22,7 @@ on your site:
 
 ## Installation
 
-Inside your virtualenv run: `pip install deform-foundation`; this will install the templates. You now need to include
+With your virtualenv activated: `pip install deform-foundation`; this will install the templates. You now need to include
 the "sub-app" into your primary load point for Pyramid. I do this inside of my project's `__init__.py` files towards the
 bottom:
 
