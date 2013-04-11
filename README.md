@@ -1,4 +1,28 @@
-deform-foundation
-=================
+# Deform templates in Foundation
 
-Minor template tweaks to the deform templates for use with Zurb's Foundation.
+This is a python package to replace Deform's default templates with templates designed to use Foundation's nice features
+(particularly with forms and form errors).
+
+## Dependencies
+
+1. [Zurb's Foundation 4.x](http://foundation.zurb.com/)
+2. [Garlic.js](http://garlicjs.org/)
+
+Garlic.js isn't *necessary* for operation, but it does provide nice functionality for your users by saving the form
+state to localStorage in the event they accidentally hit the back button or their browser crashes. It's easy to include
+on your site:
+
+    <html lang="en">
+      <head>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/garlic.js/1.2.0/garlic.min.js"></script>
+      </head>
+      <body>
+      </body>
+    </html>
+
+## March 25th, 2013
+
+Presently, I've only cleaned up the default form.pt template to remove unnecessary messages when the form is in an
+exceptional state and to provide the inter-field form error messages better styled.
+
+All form field error messages use Foundation's form error message styling.
