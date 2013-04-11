@@ -20,6 +20,15 @@ on your site:
       </body>
     </html>
 
+## Installation
+
+Inside your virtualenv run: `pip install deform-foundation`; this will install the templates. You now need to include
+the "sub-app" into your primary load point for Pyramid. I do this inside of my project's `__init__.py` files towards the
+bottom:
+
+    config.include('deform_foundation')
+    return config.make_wsgi_app()
+
 ## March 25th, 2013
 
 Presently, I've only cleaned up the default form.pt template to remove unnecessary messages when the form is in an
