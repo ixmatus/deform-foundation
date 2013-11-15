@@ -2,6 +2,13 @@ from colander import null
 from deform.widget import SelectWidget
 from deform.widget import _normalize_choices
 
+try:
+    unicode
+except NameError:  # pragma NO COVER
+    STRING_TYPES = (str,)
+else:  # pragma NO COVER
+    STRING_TYPES = (str, bytes)
+
 
 def _normalize_optgroup_choices(values):
     result = []
@@ -11,6 +18,7 @@ def _normalize_optgroup_choices(values):
             'values': _normalize_choices(group['values']),
         })
     return result
+
 
 class ChosenSingleWidget(SelectWidget):
     template = 'chosen_single'
@@ -45,6 +53,6 @@ class ChosenMultipleWidget(SelectWidget):
     def deserialize(self, field, pstruct):
         if pstruct is null:
             return null
-        if isinstance(pstruct, str):
+        if isinstance(pstruct, STRING_TYPES):
             return (pstruct,)
         return tuple(pstruct)
