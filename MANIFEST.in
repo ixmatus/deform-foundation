@@ -1,3 +1,6 @@
-recursive-include deform_foundation/ *.md
-recursive-include deform_foundation/static/ *.css *.js
-recursive-include deform_foundation/templates/ *.pt
+include README.md
+
+graft deform_foundation/static
+graft deform_foundation/templates
+
+recursive-include deform_foundation/ *.css *.js *.t
