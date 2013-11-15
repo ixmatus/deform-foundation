@@ -1,2 +1,3 @@
+recursive-include deform_foundation/ *.md
 recursive-include deform_foundation/static/ *.css *.js
 recursive-include deform_foundation/templates/ *.pt

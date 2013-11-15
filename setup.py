@@ -2,7 +2,7 @@ import os
 
 from setuptools import setup, find_packages
 
-version = '0.5.0'
+version = '0.5.4'
 
 here = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(here, 'README.md')) as f:
@@ -19,10 +19,13 @@ setup(name="deform_foundation",
                    "Topic :: Software Development :: Libraries :: Python Modules",
                    ],
       author="Parnell Springmeyer",
-      author_email="ixmatus@gmail.com",
+      author_email="parnell@ixmat.us",
       url="http://bitbucket.org/ixmatus/deform-foundation",
       license="PSF",
       zip_safe=False,
       packages=find_packages(),
       include_package_data=True,
+      data_files=[
+          ("", ['README.md'])
+      ]
       )
