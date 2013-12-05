@@ -11,11 +11,6 @@
   </select>
 
   <script type="text/javascript">
-    deform.addCallback(
-        '${field.oid}',
-        function(oid) {
-            $('#' + oid).chosen({allow_single_deselect: true});
-        }
-    );
+    $('#${field.oid}').chosen({allow_single_deselect: true});
   </script>
 </div>

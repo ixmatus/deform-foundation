@@ -12,11 +12,6 @@
   </select>
 
   <script type="text/javascript">
-    deform.addCallback(
-        '${field.oid}',
-        function(oid) {
-            $('#' + oid).chosen();
-        }
-    );
+    $('#${field.oid}').chosen();
   </script>
   <input type="hidden" name="__end__" value="${field.name}:sequence"/>
