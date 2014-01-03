@@ -30,13 +30,13 @@ else:
 
 @colander.deferred
 def deferred_csrf_value(node, kw):
-    return kw['request'].session.get_csrf_token()
+    return kw['request'].session.get_csrf_token().decode()
 
 
 @colander.deferred
 def deferred_csrf_validator(node, kw):
     def csrf_validate(node, value):
-        if value != kw['request'].session.get_csrf_token():
+        if value != kw['request'].session.get_csrf_token().decode():
             raise colander.Invalid(node, 'Invalid cross-site scripting token')
     return csrf_validate
 
