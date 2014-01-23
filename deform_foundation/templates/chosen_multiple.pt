@@ -8,7 +8,7 @@
    <option tal:repeat="(value, description) values"
            tal:attributes="selected value in cstruct and 'selected';
                            class field.widget.css_class"
-           value="${value}">${description}</option>
+           value="${value}">${structure: description}</option>
   </select>
 
   <script type="text/javascript">
